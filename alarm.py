@@ -1,0 +1,14 @@
+#made by amir bou
+import time
+from playsound import playsound
+from datetime import datetime
+
+alarmtime = "09:00"
+while True:
+    lcltime = datetime.now().strftime('%H:%M')
+    if lcltime == alarmtime:
+        playsound("output.mp3")
+        break
+    else:
+        print('not yet')
+        time.sleep(10)
